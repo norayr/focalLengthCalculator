@@ -16,10 +16,10 @@
         <Filename Value="unit1.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="33"/>
+        <TopLine Value="32"/>
         <CursorPos X="40" Y="58"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
@@ -29,8 +29,9 @@
         <Filename Value="focallengthcounter.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="focalLengthCounter"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <CursorPos X="15" Y="12"/>
+        <CursorPos X="17" Y="15"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
