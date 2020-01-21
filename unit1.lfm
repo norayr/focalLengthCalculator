@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 425
+  Left = 417
   Height = 414
-  Top = 222
-  Width = 624
+  Top = 234
+  Width = 877
   Caption = 'Form1'
   ClientHeight = 414
-  ClientWidth = 624
+  ClientWidth = 877
   OnCreate = FormCreate
   LCLVersion = '2.1.0.0'
   object focalLength: TEdit
@@ -13,11 +13,12 @@ object Form1: TForm1
     Height = 32
     Top = 32
     Width = 80
+    OnKeyPress = focalLengthKeyPress
     TabOrder = 0
     Text = 'focalLength'
   end
   object focalLengthLabel: TLabel
-    Left = 40
+    Left = 74
     Height = 16
     Top = 48
     Width = 98
@@ -25,9 +26,9 @@ object Form1: TForm1
     ParentColor = False
   end
   object sensorSizeLabel: TLabel
-    Left = 40
+    Left = 74
     Height = 16
-    Top = 100
+    Top = 136
     Width = 96
     Caption = 'sensorSizeLabel'
     ParentColor = False
@@ -35,9 +36,11 @@ object Form1: TForm1
   object sensorSizesComboBox: TComboBox
     Left = 152
     Height = 32
-    Top = 84
+    Top = 120
     Width = 308
     ItemHeight = 0
+    OnChange = sensorSizesComboBoxChange
+    OnSelect = sensorSizesComboBoxSelect
     TabOrder = 1
     Text = 'sensorSizesComboBox'
   end
@@ -79,6 +82,58 @@ object Form1: TForm1
     Top = 184
     Width = 94
     Caption = 'calculateButton'
+    OnClick = calculateButtonClick
     TabOrder = 4
+  end
+  object customSensorDimensionsCheckBox: TCheckBox
+    Left = 328
+    Height = 23
+    Top = 80
+    Width = 240
+    Caption = 'customSensorDimensionsCheckBox'
+    OnChange = customSensorDimensionsCheckBoxChange
+    TabOrder = 5
+  end
+  object sensorXEdit: TEdit
+    Left = 576
+    Height = 32
+    Top = 120
+    Width = 80
+    OnKeyPress = sensorXEditKeyPress
+    TabOrder = 6
+    Text = 'sensorXEdit'
+  end
+  object sensorYEdit: TEdit
+    Left = 736
+    Height = 32
+    Top = 120
+    Width = 80
+    OnKeyPress = sensorYEditKeyPress
+    TabOrder = 7
+    Text = 'sensorYEdit'
+  end
+  object sensorXLabel: TLabel
+    Left = 664
+    Height = 16
+    Top = 136
+    Width = 79
+    Caption = 'sensorXLabel'
+    ParentColor = False
+  end
+  object sensorYLabel: TLabel
+    Left = 824
+    Height = 16
+    Top = 136
+    Width = 79
+    Caption = 'sensorYLabel'
+    ParentColor = False
+  end
+  object focalLengthMMLabel: TLabel
+    Left = 240
+    Height = 16
+    Top = 48
+    Width = 120
+    Caption = 'focalLengthMMLabel'
+    ParentColor = False
   end
 end
