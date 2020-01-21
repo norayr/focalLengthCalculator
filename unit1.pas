@@ -56,6 +56,8 @@ procedure TForm1.FormCreate(Sender: TObject);
 var
     j : integer;
 begin
+  Form1.Caption:= 'focal length calculator';
+
   focalLengthLabel.Caption:= 'focal length:';
   focalLength.Text:= '';
   focalLengthMMLabel.Caption:= 'mm';
