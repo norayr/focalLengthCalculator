@@ -158,7 +158,7 @@ begin
       if (sensorXEdit.GetTextLen > 0) and (sensorYEdit.GetTextLen > 0) then begin
          cf := focalLengthCounter.cropFactor(StrToInt(sensorXEdit.Text), StrToInt(sensorYEdit.Text));
          lensMultiplicationFactor.Text:= FloatToStr(cf);
-         lensEquivalent.Text:= IntToStr(focalLengthCounter.focalLengthEquivalent(StrToInt(focalLength.Text), cf));
+         lensEquivalent.Text:= IntToStr(focalLengthCounter.focalLengthEquivalent(StrToFloat(focalLength.Text), cf));
 
       end
      else
@@ -176,7 +176,7 @@ begin
        begin
          sns := sensorsdb.pSensor(sensorsdb.sensors[sensorSizesComboBox.ItemIndex]);
          lensMultiplicationFactor.Text:= FloatToStr(sns^.mfact);
-         lensEquivalent.Text:= IntToStr(focalLengthCounter.focalLengthEquivalent(StrToInt(focalLength.Text), sns^.mfact));
+         lensEquivalent.Text:= IntToStr(focalLengthCounter.focalLengthEquivalent(StrToFloat(focalLength.Text), sns^.mfact));
        end;
     end;
   end

@@ -16,7 +16,7 @@ const
 
 function diagonal(x, y: real): real; //x and y are the sizes of sensor
 function cropFactor(x, y: real): real;
-function focalLengthEquivalent(fl: integer; cr: real): integer;
+function focalLengthEquivalent(fl: real; cr: real): integer;
 
 implementation
 
@@ -34,7 +34,7 @@ begin
   cropFactor := referenceDiagonal / diag;
 end; //cropFactor
 
-function focalLengthEquivalent(fl: integer; cr: real): integer;
+function focalLengthEquivalent(fl: real; cr: real): integer;
 begin
   focalLengthEquivalent := round(fl * cr);
 end;
