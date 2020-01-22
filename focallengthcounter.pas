@@ -17,6 +17,7 @@ const
 function diagonal(x, y: real): real; //x and y are the sizes of sensor
 function cropFactor(x, y: real): real;
 function focalLengthEquivalent(fl: real; cr: real): integer;
+//https://en.wikipedia.org/wiki/Angle_of_view#Common_lens_angles_of_view
 function horizontalFOV(width, focalLength: real): real;
 function verticalFOV(height, focalLength: real): real;
 function diagonalFOV(diagonal, focalLength: real): real;
