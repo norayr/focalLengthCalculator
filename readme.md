@@ -12,3 +12,9 @@ this utility helps to get the numbers we are used to (or focal length equivalenc
 ![](fcl.png)
 
 this image shows how i calculated equivalence for the 50mm lens I use with my Mamiya RB67, i. e. the frame area is 60mmx70mm. I see that FOV is roughly equivalent to the image i would get with 23mm lens on so called 'full frame' sensor.
+
+update: now field of view calculations also work.
+
+![](fcl2.png)
+
+this image illustrates horizontal, vertical and diagonal field of view in degrees for given focal length and sensor.
