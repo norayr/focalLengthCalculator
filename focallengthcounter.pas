@@ -17,6 +17,9 @@ const
 function diagonal(x, y: real): real; //x and y are the sizes of sensor
 function cropFactor(x, y: real): real;
 function focalLengthEquivalent(fl: real; cr: real): integer;
+function horizontalFOV(width, focalLength: real): real;
+function verticalFOV(height, focalLength: real): real;
+function diagonalFOV(diagonal, focalLength: real): real;
 
 implementation
 
@@ -39,7 +42,20 @@ begin
   focalLengthEquivalent := round(fl * cr);
 end;
 
+function horizontalFOV(width, focalLength: real): real;
+begin
+   horizontalFOV := (2 * ArcTan(width/(focalLength * 2))* 180 / Pi);
+end;
 
+function verticalFOV(height, focalLength: real): real;
+begin
+   verticalFOV := (2 * ArcTan(height/(focalLength * 2))* 180 / Pi);
+end;
+
+function diagonalFOV(diagonal, focalLength: real): real;
+begin
+   diagonalFOV := (2 * ArcTan(diagonal/(focalLength * 2))* 180 / Pi);
+end;
 
 begin
 

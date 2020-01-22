@@ -39,7 +39,6 @@ begin
   //https://www.dpreview.com/forums/post/31310027
   //table taken from https://en.wikipedia.org/wiki/Image_sensor_format
 
-  //i use simple array of record to make the code more portable, including more portable to other languages
   if not(FileExists(sensorsFile)) then begin
     Dialogs.ShowMessage('cannot find ' + sensorsFile + ' file.');
     exit;

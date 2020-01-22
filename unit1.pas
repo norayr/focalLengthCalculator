@@ -82,7 +82,7 @@ begin
   lensMultiplicationFactor.Text:= '';
   lensMultiplicationFactor.ReadOnly:= true;
 
-  lensFocalLengthEquivalentLabel.Caption:= 'lens equivalent:';
+  lensFocalLengthEquivalentLabel.Caption:= '35mm focal length equivalent:';
   lensEquivalent.Text:= '';
   lensEquivalent.ReadOnly:= true;
 
@@ -159,6 +159,9 @@ begin
          cf := focalLengthCounter.cropFactor(StrToInt(sensorXEdit.Text), StrToInt(sensorYEdit.Text));
          lensMultiplicationFactor.Text:= FloatToStr(cf);
          lensEquivalent.Text:= IntToStr(focalLengthCounter.focalLengthEquivalent(StrToFloat(focalLength.Text), cf));
+         FOVHorizontalEdit.Text:= FloatToStr(focalLengthCounter.horizontalFOV(StrToFloat(sensorXEdit.Text), StrToFloat(focalLength.Text)));
+         FOVVerticalEdit.Text:= FloatToStr(focalLengthCounter.verticalFOV(StrToFloat(sensorYEdit.Text), StrToFloat(focalLength.Text)));
+         FOVDiagonalEdit.Text:= FloatToStr(focalLengthCounter.diagonalFOV(focalLengthCounter.diagonal(StrToFloat(sensorXEdit.Text),StrToFloat(sensorYEdit.Text)), StrToFloat(focalLength.Text)));
 
       end
      else
@@ -177,6 +180,9 @@ begin
          sns := sensorsdb.pSensor(sensorsdb.sensors[sensorSizesComboBox.ItemIndex]);
          lensMultiplicationFactor.Text:= FloatToStr(sns^.mfact);
          lensEquivalent.Text:= IntToStr(focalLengthCounter.focalLengthEquivalent(StrToFloat(focalLength.Text), sns^.mfact));
+         FOVHorizontalEdit.Text:= FloatToStr(focalLengthCounter.horizontalFOV(sns^.width, StrToFloat(focalLength.Text)));
+         FOVVerticalEdit.Text:= FloatToStr(focalLengthCounter.verticalFOV(sns^.height, StrToFloat(focalLength.Text)));
+         FOVDiagonalEdit.Text:= FloatToStr(focalLengthCounter.diagonalFOV(sns^.diag, StrToFloat(focalLength.Text)));
        end;
     end;
   end
