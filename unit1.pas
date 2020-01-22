@@ -204,11 +204,15 @@ end;
 
 procedure TForm1.focalLengthKeyPress(Sender: TObject; var Key: char);
 begin
-     if not (Key in [#8, '0'..'9']) then begin
-       //ShowMessage('Invalid key');
-       // Discard the key
-       Key := #0;
-     end; //if
+  if not (Key in [#8, '0'..'9', DecimalSeparator]) then begin
+    //ShowMessage('Invalid key: ' + Key);
+    Key := #0;
+  end
+  else if (Key = DecimalSeparator) and
+          (Pos(Key, focalLength.Text) > 0) then begin
+    //ShowMessage('Invalid Key: twice ' + Key);
+    Key := #0;
+  end;
 end;
 
 end.
