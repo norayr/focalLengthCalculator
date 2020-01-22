@@ -1,11 +1,11 @@
 object Form1: TForm1
   Left = 417
-  Height = 414
+  Height = 465
   Top = 234
-  Width = 877
+  Width = 880
   Caption = 'Form1'
-  ClientHeight = 414
-  ClientWidth = 877
+  ClientHeight = 465
+  ClientWidth = 880
   OnCreate = FormCreate
   LCLVersion = '2.1.0.0'
   object focalLength: TEdit
@@ -135,5 +135,61 @@ object Form1: TForm1
     Width = 120
     Caption = 'focalLengthMMLabel'
     ParentColor = False
+  end
+  object FOVLabel: TLabel
+    Left = 56
+    Height = 16
+    Top = 344
+    Width = 58
+    Caption = 'FOVLabel'
+    ParentColor = False
+  end
+  object FOVHorizontalLabel: TLabel
+    Left = 56
+    Height = 16
+    Top = 392
+    Width = 117
+    Caption = 'FOVHorizontalLabel'
+    ParentColor = False
+  end
+  object FOVHorizontalEdit: TEdit
+    Left = 120
+    Height = 32
+    Top = 376
+    Width = 80
+    TabOrder = 8
+    Text = 'FOVHorizontalEdit'
+  end
+  object FOVVerticalLabel: TLabel
+    Left = 248
+    Height = 16
+    Top = 392
+    Width = 101
+    Caption = 'FOVVerticalLabel'
+    ParentColor = False
+  end
+  object FOVVerticalEdit: TEdit
+    Left = 296
+    Height = 32
+    Top = 376
+    Width = 80
+    TabOrder = 9
+    Text = 'FOVVerticalEdit'
+  end
+  object FOVDiagonalLabel: TLabel
+    Left = 440
+    Height = 16
+    Top = 392
+    Width = 109
+    Caption = 'FOVDiagonalLabel'
+    ParentColor = False
+  end
+  object FOVDiagonalEdit: TEdit
+    Left = 496
+    Height = 32
+    Top = 376
+    Width = 80
+    TabOrder = 10
+    Text = 'FOVDiagonalEdit'
   end
 end
